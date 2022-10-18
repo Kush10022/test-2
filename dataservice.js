@@ -25,8 +25,7 @@ module.exports.BSD = function () {
         resolve(arr);
       });
   };
-
-
+  
   module.exports.highGPA = function () {
     return new Promise((resolve, reject)=> {
         var maxGPA = stud[0].gpa;
