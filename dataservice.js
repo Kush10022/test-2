@@ -30,7 +30,7 @@ module.exports.BSD = function () {
     return new Promise((resolve, reject)=> {
         var maxGPA = stud[0].gpa;
         var arr = [];
-        for (let i= 0; i < stu.length; i++) {
+        for (let i= 0; i < stud.length; i++) {
             if (stud[i].gpa > maxGPA){
                 maxGPA = stud[i].gpa;
                 arr.push(stud[i]);
@@ -45,4 +45,14 @@ module.exports.BSD = function () {
       
   
   };
+  module.exports.allStudents = ()=>{
+    return new Promise ((resolve,reject)=>{
+        if(students.length > 0){
+            resolve(students);
+        }
+        else{
+            reject("No data avaiable");
+        }
+    })
+}
 
